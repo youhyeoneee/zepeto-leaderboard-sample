@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: b1c0aadfe5f654767ba8b5aa37dc407b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nclass UserInfo extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        let ids = [\"5ea6cd8655ad529d1914475b\"];\r\n       
+    ZEPETO_World_1.ZepetoWorldHelper.GetUserInfo(ids, (info) => {\r\n           
+    for (let i = 0; i < info.length; i++) {\r\n                console.log(`userId
+    : ${info[i].userOid}, name : ${info[i].name}, zepetoId : ${info[i].zepetoId}`);\r\n           
+    }\r\n        }, (error) => {\r\n            console.log(error);\r\n        });\r\n   
+    }\r\n}\r\nexports.default = UserInfo;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVXNlckluZm8uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJVc2VySW5mby50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCwrQ0FBcUQ7QUFFckQsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUV2RCxLQUFLO1FBQ0QsSUFBSSxHQUFHLEdBQWEsQ0FBQywwQkFBMEIsQ0FBQyxDQUFDO1FBQ2pELGdDQUFpQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUUsQ0FBQyxJQUFhLEVBQUUsRUFBRTtZQUNqRCxLQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBRTtnQkFDbEMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxZQUFZLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxPQUFPLFlBQVksSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDLElBQUksZ0JBQWdCLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDO2FBQ3RHO1FBQ0wsQ0FBQyxFQUFFLENBQUMsS0FBSyxFQUFFLEVBQUU7WUFDVCxPQUFPLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3ZCLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztDQUNKO0FBWkQsMkJBWUMifQ==","assetPath":"Assets/ZepetoScripts/Test/UserInfo.ts","manifest":{"properties":[],"name":"UserInfo","description":""},"isCompiled":true}'
+  typescriptHash: 01e0f81159eb3ada0e6e0fee4262624d
+  onlyWriteTrigger: 0

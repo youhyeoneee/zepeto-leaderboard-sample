@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: bc40466c8cbfb43a48bd1316b36fd968
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass AnimatorTest extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.animator = this.GetComponent($typeof(UnityEngine_1.Animator));\r\n   
+    }\r\n    Update() {\r\n        if (UnityEngine_1.Input.GetKeyUp(UnityEngine_1.KeyCode.F))
+    {\r\n            console.log(\"F\");\r\n            this.animator.SetBool(\"New
+    Bool\", true);\r\n        }\r\n    }\r\n}\r\nexports.default = AnimatorTest;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQW5pbWF0b3JUZXN0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQW5pbWF0b3JUZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBQ3JELDZDQUFzRDtBQUV0RCxNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBSTNELEtBQUs7UUFDRCxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxZQUFZLFNBQUMsc0JBQVEsRUFBRyxDQUFDO0lBQ2xELENBQUM7SUFFRCxNQUFNO1FBQ0YsSUFBSSxtQkFBSyxDQUFDLFFBQVEsQ0FBQyxxQkFBTyxDQUFDLENBQUMsQ0FBQyxFQUM3QjtZQUNJLE9BQU8sQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFDLENBQUM7WUFDakIsSUFBSSxDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsVUFBVSxFQUFFLElBQUksQ0FBQyxDQUFDO1NBQzNDO0lBQ0wsQ0FBQztDQUdKO0FBakJELCtCQWlCQyJ9","assetPath":"Assets/ZepetoScripts/Test/AnimatorTest.ts","manifest":{"properties":[],"name":"AnimatorTest","description":""},"isCompiled":true}'
+  typescriptHash: d624d707e83c8deb6f63277242cb4205
+  onlyWriteTrigger: 0

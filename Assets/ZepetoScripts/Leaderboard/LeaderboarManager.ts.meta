@@ -1,0 +1,48 @@
+fileFormatVersion: 2
+guid: 74ec5d9e0cb3f4a2a8d15ae422ba8c87
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    ZEPETO_Script_Leaderboard_1 = require(\\\"ZEPETO.Script.Leaderboard\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst Group_1 = require(\\\"./Group\\\");\\r\\nclass
+    LeaderboarManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.leaderboardId = \\\"7fac72ac-283d-47a1-9749-b64fb246c297\\\";\\r\\n       
+    this.startRank = 1;\\r\\n        this.endRank = 3;\\r\\n    }\\r\\n    OnEnable()
+    {\\r\\n        this.UpdateLeaderboard();\\r\\n    }\\r\\n    UpdateLeaderboard()
+    {\\r\\n        // \uC810\uC218\\r\\n        ZEPETO_Script_Leaderboard_1.LeaderboardAPI.GetRangeRank(this.leaderboardId,
+    this.startRank, this.endRank, this.resetRule, false, this.OnResult, this.OnError);\\r\\n   
+    }\\r\\n    OnResult(result) {\\r\\n        console.log(`result.isSuccess: ${result.isSuccess}`);\\r\\n       
+    let groups = UnityEngine_1.GameObject.Find(\\\"Leaderboard\\\").GetComponent($typeof(LeaderboarManager)).groups;\\r\\n       
+    if (result.rankInfo.myRank) {\\r\\n            console.log(`member: ${result.rankInfo.myRank.member},
+    rank: \\n    ${result.rankInfo.myRank.rank}, score: ${result.rankInfo.myRank.score},
+    name: \\n    ${result.rankInfo.myRank.name}`);\\r\\n            // Group \uC138\uD305
+    \\r\\n            groups[0].GetComponent($typeof(Group_1.default)).SetGroup(result.rankInfo.myRank.member,
+    result.rankInfo.myRank.name, result.rankInfo.myRank.rank, result.rankInfo.myRank.score);\\r\\n       
+    }\\r\\n        if (result.rankInfo.rankList) {\\r\\n            for (let i =
+    0; i < result.rankInfo.rankList.length; ++i) {\\r\\n                var rank
+    = result.rankInfo.rankList.get_Item(i);\\r\\n                console.log(`i:
+    ${i}, member: ${rank.member}, rank: ${rank.rank}, score: \\n    ${rank.score},
+    name: ${result.rankInfo.myRank.name}`);\\r\\n                // Group \uC138\uD305\\r\\n               
+    groups[i + 1].GetComponent($typeof(Group_1.default)).SetGroup(result.rankInfo.myRank.member,
+    result.rankInfo.myRank.name, result.rankInfo.myRank.rank, result.rankInfo.myRank.score);\\r\\n           
+    }\\r\\n        }\\r\\n    }\\r\\n    OnError(error) {\\r\\n        console.error(error);\\r\\n   
+    }\\r\\n}\\r\\nexports.default = LeaderboarManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGVhZGVyYm9hck1hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMZWFkZXJib2FyTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCx5RUFBMEY7QUFDMUYsNkNBQWtGO0FBRWxGLG1DQUEyQjtBQUUzQixNQUFxQixpQkFBa0IsU0FBUSxxQ0FBcUI7SUFBcEU7O1FBRVcsa0JBQWEsR0FBVyxzQ0FBc0MsQ0FBQztRQUM5RCxjQUFTLEdBQVcsQ0FBQyxDQUFDO1FBQ3RCLFlBQU8sR0FBVyxDQUFDLENBQUM7SUEwQ2hDLENBQUM7SUF0Q0csUUFBUTtRQUNKLElBQUksQ0FBQyxpQkFBaUIsRUFBRSxDQUFBO0lBQzVCLENBQUM7SUFFTSxpQkFBaUI7UUFDcEIsS0FBSztRQUNMLDBDQUFjLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsSUFBSSxDQUFDLFNBQVMsRUFBRSxJQUFJLENBQUMsT0FBTyxFQUN4RSxJQUFJLENBQUMsU0FBUyxFQUFFLEtBQUssRUFBRSxJQUFJLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztJQUM1RCxDQUFDO0lBRUQsUUFBUSxDQUFDLE1BQTRCO1FBQ2pDLE9BQU8sQ0FBQyxHQUFHLENBQUMscUJBQXFCLE1BQU0sQ0FBQyxTQUFTLEVBQUUsQ0FBQyxDQUFDO1FBQ3JELElBQUksTUFBTSxHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLGFBQWEsQ0FBQyxDQUFDLFlBQVksU0FBQyxpQkFBaUIsR0FBSSxNQUFNLENBQUM7UUFFckYsSUFBSSxNQUFNLENBQUMsUUFBUSxDQUFDLE1BQU0sRUFBRTtZQUN4QixPQUFPLENBQUMsR0FBRyxDQUFDLFdBQVcsTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsTUFBTTtNQUMxRCxNQUFNLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxJQUFJLFlBQVksTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsS0FBSztNQUNuRSxNQUFNLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxJQUFJLEVBQUUsQ0FBQyxDQUFDO1lBRXpCLFlBQVk7WUFDWixNQUFNLENBQUMsQ0FBQyxDQUFDLENBQUMsWUFBWSxTQUFDLGVBQUssR0FBSSxRQUFRLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsTUFBTSxFQUFFLE1BQU0sQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLElBQUksRUFBRSxNQUFNLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxJQUFJLEVBQUUsTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDbks7UUFFRCxJQUFJLE1BQU0sQ0FBQyxRQUFRLENBQUMsUUFBUSxFQUFFO1lBQzFCLEtBQUssSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxNQUFNLENBQUMsUUFBUSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUUsRUFBRSxDQUFDLEVBQUU7Z0JBQ3RELElBQUksSUFBSSxHQUFHLE1BQU0sQ0FBQyxRQUFRLENBQUMsUUFBUSxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQztnQkFDaEQsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsYUFBYSxJQUFJLENBQUMsTUFBTSxXQUFXLElBQUksQ0FBQyxJQUFJO01BQ3pFLElBQUksQ0FBQyxLQUFLLFdBQVcsTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsSUFBSSxFQUFFLENBQUMsQ0FBQztnQkFFMUMsV0FBVztnQkFDWCxNQUFNLENBQUMsQ0FBQyxHQUFDLENBQUMsQ0FBQyxDQUFDLFlBQVksU0FBQyxlQUFLLEdBQUksUUFBUSxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLE1BQU0sRUFBRSxNQUFNLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxJQUFJLEVBQUUsTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsSUFBSSxFQUFFLE1BQU0sQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxDQUFDO2FBQ3JLO1NBQ0o7SUFDTCxDQUFDO0lBRUQsT0FBTyxDQUFDLEtBQWE7UUFDakIsT0FBTyxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUN6QixDQUFDO0NBQ0o7QUE5Q0Qsb0NBOENDIn0=\",\"assetPath\":\"Assets/ZepetoScripts/Leaderboard/LeaderboarManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"mscorlib\",\"name\":\"leaderboardId\",\"type\":\"System.String\",\"isArray\":false,\"initValue\":[\"7fac72ac-283d-47a1-9749-b64fb246c297\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"ZEPETO.Script.Leaderboard\",\"name\":\"resetRule\",\"type\":\"ZEPETO.Script.Leaderboard.ResetRule\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"groups\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"LeaderboarManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 1005400c5b188c00ca4bfaf385e0c363
+  onlyWriteTrigger: 0

@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 06548acf7332f4a2ba3f836ad80d7201
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst LeaderboarManager_1
+    = require(\\\"./LeaderboarManager\\\");\\r\\nclass GameManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    constructor() {\\r\\n        super(...arguments);\\r\\n        this.score
+    = 20;\\r\\n    }\\r\\n    Start() {\\r\\n        this.bestScoreText.text = UnityEngine_1.PlayerPrefs.GetInt(\\\"BestScore\\\",
+    0).toString();\\r\\n    }\\r\\n    Update() {\\r\\n        this.score++;\\r\\n       
+    if (UnityEngine_1.Input.anyKeyDown) {\\r\\n            this.GameOver();\\r\\n       
+    }\\r\\n    }\\r\\n    GameOver() {\\r\\n        // \uD604\uC7AC \uC810\uC218\\r\\n       
+    this.scoreText.text = this.score.toString(); // \uC810\uC218 \\r\\n        //
+    \uCD5C\uACE0 \uC810\uC218\\r\\n        if (UnityEngine_1.PlayerPrefs.GetInt(\\\"BestScore\\\",
+    0) < this.score) {\\r\\n            UnityEngine_1.PlayerPrefs.SetInt(\\\"BestScore\\\",
+    this.score);\\r\\n            this.bestScoreText.text = this.score.toString();\\r\\n           
+    this.SetScore(this.score);\\r\\n        }\\r\\n    }\\r\\n    SetScore(score)
+    {\\r\\n        // LeaderboardAPI.SetScore(this.leaderboardId, this.score, this.OnResult,
+    this.OnError);\\r\\n        // \uB9AC\uB354\uBCF4\uB4DC \uC5C5\uB370\uC774\uD2B8\\r\\n       
+    this.leaderboard.GetComponent($typeof(LeaderboarManager_1.default)).UpdateLeaderboard();\\r\\n   
+    }\\r\\n    OnResult(result) {\\r\\n        console.log(`result.isSuccess: ${result.isSuccess}`);\\r\\n   
+    }\\r\\n    OnError(error) {\\r\\n        console.error(error);\\r\\n    }\\r\\n}\\r\\nexports.default
+    = GameManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZU1hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHYW1lTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUVyRCw2Q0FBNEQ7QUFHNUQsMkRBQW1EO0FBRW5ELE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFBOUQ7O1FBRVcsVUFBSyxHQUFXLEVBQUUsQ0FBQztJQTJDOUIsQ0FBQztJQXRDRyxLQUFLO1FBQ0QsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLEdBQUcseUJBQVcsQ0FBQyxNQUFNLENBQUMsV0FBVyxFQUFFLENBQUMsQ0FBQyxDQUFDLFFBQVEsRUFBRSxDQUFDO0lBQzVFLENBQUM7SUFFRCxNQUFNO1FBQ0YsSUFBSSxDQUFDLEtBQUssRUFBRSxDQUFDO1FBQ2IsSUFBSSxtQkFBSyxDQUFDLFVBQVUsRUFBQztZQUNqQixJQUFJLENBQUMsUUFBUSxFQUFFLENBQUE7U0FDbEI7SUFFTCxDQUFDO0lBR0QsUUFBUTtRQUNKLFFBQVE7UUFDUixJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUMsTUFBTTtRQUVuRCxRQUFRO1FBQ1IsSUFBRyx5QkFBVyxDQUFDLE1BQU0sQ0FBQyxXQUFXLEVBQUUsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLEtBQUssRUFBQztZQUMvQyx5QkFBVyxDQUFDLE1BQU0sQ0FBQyxXQUFXLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO1lBQzVDLElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsUUFBUSxFQUFFLENBQUM7WUFDaEQsSUFBSSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDN0I7SUFDTCxDQUFDO0lBQ0QsUUFBUSxDQUFDLEtBQWE7UUFDbEIsd0ZBQXdGO1FBRXhGLFlBQVk7UUFDWixJQUFJLENBQUMsV0FBVyxDQUFDLFlBQVksU0FBQywyQkFBaUIsR0FBSSxpQkFBaUIsRUFBRSxDQUFDO0lBQzNFLENBQUM7SUFFRCxRQUFRLENBQUMsTUFBd0I7UUFDN0IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxxQkFBcUIsTUFBTSxDQUFDLFNBQVMsRUFBRSxDQUFDLENBQUM7SUFDekQsQ0FBQztJQUVELE9BQU8sQ0FBQyxLQUFhO1FBQ2pCLE9BQU8sQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDekIsQ0FBQztDQUNKO0FBN0NELDhCQTZDQyJ9\",\"assetPath\":\"Assets/ZepetoScripts/Leaderboard/GameManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"mscorlib\",\"name\":\"score\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"20\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"scoreText\",\"type\":\"UnityEngine.UI.Text\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"bestScoreText\",\"type\":\"UnityEngine.UI.Text\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"leaderboard\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"GameManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 676b16efdfa9a78bbb330b62a2f5aacf
+  onlyWriteTrigger: 0

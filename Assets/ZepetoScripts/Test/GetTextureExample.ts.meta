@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: db9df72da73b746c7a7f41319919e45b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nclass
+    GetTextureExample extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        ZEPETO_World_1.ZepetoWorldHelper.GetProfileTexture(this.userId,
+    (texture) => {\r\n            this.sampleImage.sprite = this.GetSprite(texture);\r\n       
+    }, (error) => {\r\n            console.log(error);\r\n        });\r\n    }\r\n   
+    GetSprite(texture) {\r\n        let rect = new UnityEngine_1.Rect(0, 0, texture.width,
+    texture.height);\r\n        return UnityEngine_1.Sprite.Create(texture, rect,
+    new UnityEngine_1.Vector2(0.5, 0.5));\r\n    }\r\n}\r\nexports.default = GetTextureExample;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2V0VGV4dHVyZUV4YW1wbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHZXRUZXh0dXJlRXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCwrQ0FBOEM7QUFDOUMsNkNBQW9FO0FBR3BFLE1BQXFCLGlCQUFrQixTQUFRLHFDQUFxQjtJQUtoRSxLQUFLO1FBQ0QsZ0NBQWlCLENBQUMsaUJBQWlCLENBQUMsSUFBSSxDQUFDLE1BQU0sRUFBQyxDQUFDLE9BQWUsRUFBQyxFQUFFO1lBRS9ELElBQUksQ0FBQyxXQUFXLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsT0FBTyxDQUFDLENBQUM7UUFFdEQsQ0FBQyxFQUFDLENBQUMsS0FBSyxFQUFDLEVBQUU7WUFDUCxPQUFPLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3ZCLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELFNBQVMsQ0FBQyxPQUFlO1FBQ3JCLElBQUksSUFBSSxHQUFRLElBQUksa0JBQUksQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLE9BQU8sQ0FBQyxLQUFLLEVBQUUsT0FBTyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQzlELE9BQU8sb0JBQU0sQ0FBQyxNQUFNLENBQUMsT0FBb0IsRUFBRSxJQUFJLEVBQUUsSUFBSSxxQkFBTyxDQUFDLEdBQUcsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVFLENBQUM7Q0FDSjtBQW5CRCxvQ0FtQkMifQ==","assetPath":"Assets/ZepetoScripts/Test/GetTextureExample.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"userId","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"sampleImage","type":"UnityEngine.UI.Image","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GetTextureExample","description":""},"isCompiled":true}'
+  typescriptHash: 07dfe1139954c8fa6ff40872b014e41f
+  onlyWriteTrigger: 0
