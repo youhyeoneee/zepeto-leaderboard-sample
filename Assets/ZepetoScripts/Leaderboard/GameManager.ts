@@ -7,12 +7,14 @@ import LeaderboarManager from './LeaderboarManager'
 
 export default class GameManager extends ZepetoScriptBehaviour {
 
-    public score: number = 20;
+    public score: number = 0;
     public scoreText: Text;
     public bestScoreText: Text;
     public leaderboard : GameObject;
 
     Start() {
+        // 한 번 할때마다 점수 초기화 (주석 처리 가능)
+        PlayerPrefs.SetInt("BestScore", 0);
         this.bestScoreText.text = PlayerPrefs.GetInt("BestScore", 0).toString();
     }
     
@@ -24,7 +26,6 @@ export default class GameManager extends ZepetoScriptBehaviour {
 
     }
     
-    
     GameOver(){
         // 현재 점수
         this.scoreText.text = this.score.toString(); // 점수 
@@ -33,18 +34,13 @@ export default class GameManager extends ZepetoScriptBehaviour {
         if(PlayerPrefs.GetInt("BestScore", 0) < this.score){
             PlayerPrefs.SetInt("BestScore", this.score);
             this.bestScoreText.text = this.score.toString();
-            this.SetScore(this.score);
+            // 리더보드 업데이트
+            LeaderboardAPI.SetScore(this.leaderboard.GetComponent<LeaderboarManager>().leaderboardId, this.score, this.OnResult, this.OnError);
         }
-    }
-    SetScore(score: number){
-        // LeaderboardAPI.SetScore(this.leaderboardId, this.score, this.OnResult, this.OnError);
-        
-        // 리더보드 업데이트
-        this.leaderboard.GetComponent<LeaderboarManager>().UpdateLeaderboard();
     }
 
     OnResult(result: SetScoreResponse) {
-        console.log(`result.isSuccess: ${result.isSuccess}`);
+        // console.log(`result.isSuccess: ${result.isSuccess}`);
     }
 
     OnError(error: string) {

@@ -10,39 +10,34 @@ export default class LeaderboarManager extends ZepetoScriptBehaviour {
     private startRank: number = 1;
     private endRank: number = 3;
     public resetRule: ResetRule;
-    public groups : GameObject[];
+    public groups : GameObject[] = [];
 
-    OnEnable() {
-        this.UpdateLeaderboard()
+    public OnEnable(){
+        this.LoadLeaderboard();
     }
     
-    public UpdateLeaderboard(){
-        // 점수
+    public LoadLeaderboard(){
+        
         LeaderboardAPI.GetRangeRank(this.leaderboardId, this.startRank, this.endRank,
-            this.resetRule ,false ,this.OnResult, this.OnError);
+            this.resetRule ,false ,(result)=>{this.OnResult(result);}, (error)=>{this.OnError(error);});
     }
     
     OnResult(result: GetRangeRankResponse) {
         console.log(`result.isSuccess: ${result.isSuccess}`);
-        let groups = GameObject.Find("Leaderboard").GetComponent<LeaderboarManager>().groups;
-
+        
         if (result.rankInfo.myRank) {
-            console.log(`member: ${result.rankInfo.myRank.member}, rank: 
-    ${result.rankInfo.myRank.rank}, score: ${result.rankInfo.myRank.score}, name: 
-    ${result.rankInfo.myRank.name}`);
-
+            console.log(this.groups.length);
             // Group 세팅 
-            groups[0].GetComponent<Group>().SetGroup(result.rankInfo.myRank.member, result.rankInfo.myRank.name, result.rankInfo.myRank.rank, result.rankInfo.myRank.score);
+            this.groups[0].GetComponent<Group>().SetGroup(result.rankInfo.myRank.member, result.rankInfo.myRank.name, result.rankInfo.myRank.rank, result.rankInfo.myRank.score);
         }
 
         if (result.rankInfo.rankList) {
-            for (let i = 0; i < result.rankInfo.rankList.length; ++i) {
-                var rank = result.rankInfo.rankList.get_Item(i);
-                console.log(`i: ${i}, member: ${rank.member}, rank: ${rank.rank}, score: 
-    ${rank.score}, name: ${result.rankInfo.myRank.name}`);
-                
+            var end = (result.rankInfo.rankList.length > this.endRank)? this.endRank : result.rankInfo.rankList.length;
+            
+            for (let i = 0; i < end; ++i) {
+                var rank = result.rankInfo.rankList[i];
                 // Group 세팅
-                groups[i+1].GetComponent<Group>().SetGroup(result.rankInfo.myRank.member, result.rankInfo.myRank.name, result.rankInfo.myRank.rank, result.rankInfo.myRank.score);
+                this.groups[i+1].GetComponent<Group>().SetGroup(rank.member, rank.name, rank.rank, rank.score);
             }
         }
     }

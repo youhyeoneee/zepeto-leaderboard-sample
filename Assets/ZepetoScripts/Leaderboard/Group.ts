@@ -11,6 +11,7 @@ export default class Group extends ZepetoScriptBehaviour {
     public playerScoreText: Text;
     
     public SetGroup(userId: string, name: string, rank: number, score: number){
+        
         // 이미지
         ZepetoWorldHelper.GetProfileTexture(userId,(texture:Texture)=>{
             this.playerImage.sprite = this.GetSprite(texture);
