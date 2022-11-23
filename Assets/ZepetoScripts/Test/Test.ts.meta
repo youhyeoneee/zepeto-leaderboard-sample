@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 29e70728424db467da707ee2c83a8a7e
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Test extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        let collider = this.collider;\r\n        let colliderPosition
+    = collider.gameObject.transform.position;\r\n        let objectPosition = this.transform.position;\r\n       
+    let direction = __UnityEngine__.Vector3.op_Subtraction(colliderPosition, objectPosition);\r\n   
+    }\r\n}\r\nexports.default = Test;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlRlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsaURBQXFEO0FBR3JELE1BQXFCLElBQUssU0FBUSxxQ0FBcUI7SUFJbkQsS0FBSztRQUNELElBQUksUUFBUSxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUM7UUFFN0IsSUFBSSxnQkFBZ0IsR0FBd0IsUUFBUSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO1FBQ25GLElBQUksY0FBYyxHQUF3QixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQztRQUNsRSxJQUFJLFNBQVMsMkJBSXF4cUIsY0FBZSxDQUo1d3FCLGdCQUFnQixFQUFHLGNBQWMsQ0FBQSxDQUFDO0lBRTNFLENBQUM7Q0FFSjtBQWJELHVCQWFDIn0=","assetPath":"Assets/ZepetoScripts/Test/Test.ts","manifest":{"properties":[{"assembly":"UnityEngine.PhysicsModule","name":"collider","type":"UnityEngine.Collider","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Test","description":""},"isCompiled":true}'
+  typescriptHash: a3be9478d3dc5b1acdb8883e78a4b91a
+  onlyWriteTrigger: 0

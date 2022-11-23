@@ -374,7 +374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -197, y: -116.5}
+  m_AnchoredPosition: {x: -200.7, y: -95}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &186254607
@@ -1836,17 +1836,17 @@ MonoBehaviour:
   script:
     keys:
     - resetRule
-    - groups
     - leaderboardId
+    - groups
     unityValues:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     values:
     - '{"type":"ZEPETO.Script.Leaderboard.ResetRule, ZEPETO.Script.Leaderboard","value":"{\"value__\":0}"}'
+    - '{"type":"System.String, mscorlib","value":"7fac72ac-283d-47a1-9749-b64fb246c297"}'
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":4,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - '{"type":"System.String, mscorlib","value":"7fac72ac-283d-47a1-9749-b64fb246c297"}'
     unityArrayValues:
     - {fileID: 890664094}
     - {fileID: 1531356911}
@@ -2566,21 +2566,49 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
+      propertyPath: script.keys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
+      propertyPath: script.values.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
+      propertyPath: script.keys.Array.data[0]
+      value: playerScoreText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
+      propertyPath: script.keys.Array.data[1]
+      value: playerNameText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
+      propertyPath: script.keys.Array.data[2]
+      value: playerRankText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
+      propertyPath: script.keys.Array.data[3]
+      value: playerImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
+      propertyPath: script.unityValues.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
       propertyPath: script.unityValues.Array.data[0]
       value: 
-      objectReference: {fileID: 618160929}
+      objectReference: {fileID: 564931185}
     - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
       propertyPath: script.unityValues.Array.data[1]
       value: 
-      objectReference: {fileID: 52625011}
+      objectReference: {fileID: 1603450134}
     - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
       propertyPath: script.unityValues.Array.data[2]
       value: 
-      objectReference: {fileID: 1603450134}
+      objectReference: {fileID: 52625011}
     - target: {fileID: 4379128742122476293, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
       propertyPath: script.unityValues.Array.data[3]
       value: 
-      objectReference: {fileID: 564931185}
+      objectReference: {fileID: 618160929}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 439532c8b85bf4f4fb98b1ef737aea99, type: 3}
 --- !u!224 &1913594522 stripped
