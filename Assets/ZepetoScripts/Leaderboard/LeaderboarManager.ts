@@ -26,8 +26,9 @@ export default class LeaderboarManager extends ZepetoScriptBehaviour {
         console.log(`result.isSuccess: ${result.isSuccess}`);
         
         if (result.rankInfo.myRank) {
+            var myRank = result.rankInfo.myRank;
             // Group 세팅 
-            this.groups[0].GetComponent<Group>().SetGroup(result.rankInfo.myRank.member, result.rankInfo.myRank.name, result.rankInfo.myRank.rank, result.rankInfo.myRank.score);
+            this.groups[0].GetComponent<Group>().SetGroup(myRank.member, myRank.name, myRank.rank, myRank.score);
         }
 
         if (result.rankInfo.rankList) {
