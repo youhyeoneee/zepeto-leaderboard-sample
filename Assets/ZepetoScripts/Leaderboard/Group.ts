@@ -4,26 +4,24 @@ import { Texture, Texture2D, Sprite, Rect, Vector2, GameObject } from 'UnityEngi
 import { ZepetoWorldHelper, Users } from 'ZEPETO.World'
 
 export default class Group extends ZepetoScriptBehaviour {
-    
-    public playerImage: Image;
-    public playerRankText: Text;
-    public playerNameText: Text;
-    public playerScoreText: Text;
+
+    @SerializeField() private playerImage: Image;
+    @SerializeField() private playerRankText: Text;
+    @SerializeField() private playerNameText: Text;
+    @SerializeField() private playerScoreText: Text;
     
     public SetGroup(userId: string, name: string, rank: number, score: number){
-        
-        // 이미지
+        // Set player's Image
         ZepetoWorldHelper.GetProfileTexture(userId,(texture:Texture)=>{
             this.playerImage.sprite = this.GetSprite(texture);
         },(error)=>{
             console.log(error);
         });
-        
-        // 이름, 랭크, 점수
+
+        // Set player's Name, Rank, and Score
         this.playerNameText.text = name;
         this.playerRankText.text = rank.toString();
         this.playerScoreText.text = score.toString();
-    
     }
     
     GetSprite(texture:Texture){
