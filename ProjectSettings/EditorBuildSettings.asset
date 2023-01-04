@@ -5,8 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Leaderboard/LeaderboardSample.unity
-    guid: d723f136aad1b43b5ba5a32c425c5131
+    guid: 0ba72d392280f4a438de155708362d40
+  - enabled: 1
+    path: Assets/Scenes/Test/SameScore.unity
+    guid: 2e6a857e01dbc4dfba71cebe4a26e57e
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 09cac3b0e41604dacab6217291fdc87b, type: 2}

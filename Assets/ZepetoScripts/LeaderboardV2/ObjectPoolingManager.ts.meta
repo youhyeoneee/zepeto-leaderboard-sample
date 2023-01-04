@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: c5a24a855d0cf42ee8098ca29bed56fc
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst Queue_1 = require(\"./Queue\");\r\nclass
+    ObjectPoolingManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.queue = new Queue_1.QueueImpl();\r\n   
+    }\r\n    Start() {\r\n        for (let i = 0; i < 100; i++) {\r\n           
+    const newGroup = UnityEngine_1.GameObject.Instantiate(this.groupPrefab, this.contentsParent.transform);\r\n           
+    this.queue.enQueue(newGroup);\r\n            newGroup.SetActive(false);\r\n       
+    }\r\n    }\r\n    InsertQueue(_object) {\r\n        this.queue.enQueue(_object);\r\n       
+    _object.SetActive(false);\r\n    }\r\n    GetQueue() {\r\n        const _object
+    = this.queue.deQueue();\r\n        _object.SetActive(true);\r\n        return
+    _object;\r\n    }\r\n}\r\nexports.default = ObjectPoolingManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT2JqZWN0UG9vbGluZ01hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJPYmplY3RQb29saW5nTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFzRDtBQUN0RCw2Q0FBb0Q7QUFDcEQsbUNBQW9DO0FBRXBDLE1BQXFCLG9CQUFxQixTQUFRLHFDQUFxQjtJQUF2RTs7UUFFVyxVQUFLLEdBQWMsSUFBSSxpQkFBUyxFQUFFLENBQUM7SUEwQjlDLENBQUM7SUFwQkcsS0FBSztRQUNELEtBQUssSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxHQUFHLEVBQUUsQ0FBQyxFQUFFLEVBQUU7WUFDMUIsTUFBTSxRQUFRLEdBQWUsd0JBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLFdBQVcsRUFBRSxJQUFJLENBQUMsY0FBYyxDQUFDLFNBQVMsQ0FBZSxDQUFDO1lBQ25ILElBQUksQ0FBQyxLQUFLLENBQUMsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1lBQzdCLFFBQVEsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDN0I7SUFDTCxDQUFDO0lBRUQsV0FBVyxDQUFDLE9BQW1CO1FBQzNCLElBQUksQ0FBQyxLQUFLLENBQUMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxDQUFDO1FBQzVCLE9BQU8sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDN0IsQ0FBQztJQUVELFFBQVE7UUFDSixNQUFNLE9BQU8sR0FBZSxJQUFJLENBQUMsS0FBSyxDQUFDLE9BQU8sRUFBRSxDQUFDO1FBQ2pELE9BQU8sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDeEIsT0FBTyxPQUFPLENBQUM7SUFDbkIsQ0FBQztDQUdKO0FBNUJELHVDQTRCQyJ9","assetPath":"Assets/ZepetoScripts/LeaderboardV2/ObjectPoolingManager.ts","manifest":{"properties":[{"assembly":"","name":"queue","type":"/Users/user/Desktop/zepeto-leaderboard-sample/Assets/ZepetoScripts/LeaderboardV2/Queue.QueueImpl","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"myScoreGroup","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"contentsParent","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"groupPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"ObjectPoolingManager","description":""},"isCompiled":true}'
+  typescriptHash: 0f21f9c29abe3050093a0c4a621a489c
+  onlyWriteTrigger: 0

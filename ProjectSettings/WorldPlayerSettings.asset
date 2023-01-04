@@ -17,3 +17,5 @@ MonoBehaviour:
   disableInvite: 0
   disableRoomList: 0
   disablePrivateRoom: 0
+  uniqueRoom: 0
+  launcherMediaUrl: 

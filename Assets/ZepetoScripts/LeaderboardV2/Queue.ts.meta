@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: 209069ce8d4514f3ba0508e984432423
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nexports.QueueImpl = void 0;\\r\\n//
+    \uD050 \uD074\uB798\uC2A4\\r\\nclass QueueImpl {\\r\\n    constructor() {\\r\\n       
+    this._size = 0; // _size \uAC12\uC744 \uC678\uBD80\uC5D0\uC11C \uC811\uADFC\uD558\uC9C0
+    \uBABB\uD558\uAC8C \uBB36\uC2B5\uB2C8\uB2E4.\\r\\n    }\\r\\n    // \uBB36\uC5EC\uC788\uB294
+    _size\uB97C \uBC16\uC5D0\uC11C \uD638\uCD9C\uD574\uC8FC\uAE30 \uC704\uD574 getter\uB97C
+    \uC0AC\uC6A9\uD569\uB2C8\uB2E4.\\r\\n    get size() {\\r\\n        return this._size;\\r\\n   
+    }\\r\\n    // \uD050 \uCD94\uAC00\\r\\n    enQueue(value) {\\r\\n        const
+    node = { value };\\r\\n        if (this._size === 0) {\\r\\n            this.head
+    = node;\\r\\n        }\\r\\n        else {\\r\\n            this.tail.next =
+    node;\\r\\n        }\\r\\n        this.tail = node;\\r\\n        this._size++;\\r\\n   
+    }\\r\\n    // \uD050 \uC81C\uAC70\\r\\n    deQueue() {\\r\\n        let current
+    = this.head;\\r\\n        if (!current)\\r\\n            throw new Error('queue
+    not exist..\U0001F611'); // \uD050\uAC00 \uD558\uB098\uB3C4 \uC5C6\uB294 \uC0C1\uD0DC\uBA74
+    \uC5D0\uB7EC \uBC1C\uC0DD\\r\\n        if (current.value === this.tail?.value)
+    {\\r\\n            this.tail = undefined;\\r\\n        }\\r\\n        const next
+    = current.next;\\r\\n        this.head = next;\\r\\n        this._size--;\\r\\n       
+    return current.value;\\r\\n    }\\r\\n    // \uD050 \uAC80\uC0C9 = index\\r\\n   
+    search(num) {\\r\\n        // \uD050\uAC00 \uD558\uB098\uB3C4 \uC5C6\uAC70\uB098
+    \uD574\uB2F9\uD558\uB294 \uD050\uAC00 \uC5C6\uC744 \uACBD\uC6B0\uC5D0 \uC5D0\uB7EC
+    \uBC1C\uC0DD\\r\\n        if (!this.head)\\r\\n            throw new Error('queue
+    not exist..\U0001F611');\\r\\n        if (num < 0 || num >= this._size) {\\r\\n           
+    throw new Error('No corresponding stacks found..\U0001F623');\\r\\n        }\\r\\n       
+    let count = 0;\\r\\n        let current = this.head;\\r\\n        while (count
+    < num) {\\r\\n            current = current.next;\\r\\n            count++;\\r\\n       
+    }\\r\\n        return current.value;\\r\\n    }\\r\\n}\\r\\nexports.QueueImpl
+    = QueueImpl;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUXVldWUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJRdWV1ZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFpQkEsUUFBUTtBQUNSLE1BQWEsU0FBUztJQUVsQjtRQUVRLFVBQUssR0FBVyxDQUFDLENBQUMsQ0FBQywrQkFBK0I7SUFEMUQsQ0FBQztJQUtELDBDQUEwQztJQUMxQyxJQUFJLElBQUk7UUFDSixPQUFPLElBQUksQ0FBQyxLQUFLLENBQUM7SUFDdEIsQ0FBQztJQUVELE9BQU87SUFDUCxPQUFPLENBQUMsS0FBaUI7UUFDckIsTUFBTSxJQUFJLEdBQWMsRUFBRSxLQUFLLEVBQUUsQ0FBQztRQUNsQyxJQUFJLElBQUksQ0FBQyxLQUFLLEtBQUssQ0FBQyxFQUFFO1lBQ2xCLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1NBQ3BCO2FBQU07WUFDSCxJQUFJLENBQUMsSUFBSyxDQUFDLElBQUksR0FBRyxJQUFJLENBQUM7U0FDMUI7UUFDRCxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztRQUNqQixJQUFJLENBQUMsS0FBSyxFQUFFLENBQUM7SUFDakIsQ0FBQztJQUVELE9BQU87SUFDUCxPQUFPO1FBQ0gsSUFBSSxPQUFPLEdBQWMsSUFBSSxDQUFDLElBQUksQ0FBQztRQUNuQyxJQUFJLENBQUMsT0FBTztZQUFFLE1BQU0sSUFBSSxLQUFLLENBQUMscUJBQXFCLENBQUMsQ0FBQyxDQUFDLHNCQUFzQjtRQUM1RSxJQUFJLE9BQU8sQ0FBQyxLQUFLLEtBQUssSUFBSSxDQUFDLElBQUksRUFBRSxLQUFLLEVBQUU7WUFDcEMsSUFBSSxDQUFDLElBQUksR0FBRyxTQUFTLENBQUM7U0FDekI7UUFDRCxNQUFNLElBQUksR0FBRyxPQUFPLENBQUMsSUFBSSxDQUFDO1FBQzFCLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ2pCLElBQUksQ0FBQyxLQUFLLEVBQUUsQ0FBQztRQUViLE9BQU8sT0FBTyxDQUFDLEtBQUssQ0FBQztJQUN6QixDQUFDO0lBRUQsZUFBZTtJQUNmLE1BQU0sQ0FBQyxHQUFXO1FBQ2Qsa0NBQWtDO1FBQ2xDLElBQUksQ0FBQyxJQUFJLENBQUMsSUFBSTtZQUFFLE1BQU0sSUFBSSxLQUFLLENBQUMscUJBQXFCLENBQUMsQ0FBQztRQUN2RCxJQUFJLEdBQUcsR0FBRyxDQUFDLElBQUksR0FBRyxJQUFJLElBQUksQ0FBQyxLQUFLLEVBQUU7WUFDOUIsTUFBTSxJQUFJLEtBQUssQ0FBQyxtQ0FBbUMsQ0FBQyxDQUFDO1NBQ3hEO1FBQ0QsSUFBSSxLQUFLLEdBQVcsQ0FBQyxDQUFDO1FBQ3RCLElBQUksT0FBTyxHQUFjLElBQUksQ0FBQyxJQUFJLENBQUM7UUFDbkMsT0FBTyxLQUFLLEdBQUcsR0FBRyxFQUFFO1lBQ2hCLE9BQU8sR0FBRyxPQUFPLENBQUMsSUFBSyxDQUFDO1lBQ3hCLEtBQUssRUFBRSxDQUFDO1NBQ1g7UUFDRCxPQUFPLE9BQU8sQ0FBQyxLQUFLLENBQUM7SUFDekIsQ0FBQztDQUNKO0FBdERELDhCQXNEQyJ9\",\"assetPath\":\"Assets/ZepetoScripts/LeaderboardV2/Queue.ts\",\"manifest\":{\"properties\":[],\"name\":\"QueueImpl\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 937f2e87c1b12bbeaec3a2248f814d23
+  onlyWriteTrigger: 0

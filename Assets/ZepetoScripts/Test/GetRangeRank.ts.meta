@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: f7688af0aed3b47bfa5b4b0b63d4a081
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Script_Leaderboard_1 = require(\"ZEPETO.Script.Leaderboard\");\r\nclass
+    GetRangeRankExample extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        ZEPETO_Script_Leaderboard_1.LeaderboardAPI.GetRangeRank(this.leaderboardId,
+    this.startRank, this.endRank, this.resetRule, false, this.OnResult, this.OnError);\r\n   
+    }\r\n    OnResult(result) {\r\n        console.log(`result.isSuccess: ${result.isSuccess}`);\r\n       
+    if (result.rankInfo.myRank) {\r\n            console.log(`member: ${result.rankInfo.myRank.member},
+    rank: ${result.rankInfo.myRank.rank}, \n                        score: ${result.rankInfo.myRank.score},
+    name: ${result.rankInfo.myRank.name}`);\r\n        }\r\n        if (result.rankInfo.rankList)
+    {\r\n            for (let i = 0; i < result.rankInfo.rankList.length; ++i) {\r\n               
+    const rank = result.rankInfo.rankList.get_Item(i);\r\n                console.log(`i:
+    ${i}, member: ${rank.member}, rank: ${rank.rank}, score: ${rank.score}, name:
+    ${result.rankInfo.myRank.name}`);\r\n            }\r\n        }\r\n    }\r\n   
+    OnError(error) {\r\n        console.error(error);\r\n    }\r\n}\r\nexports.default
+    = GetRangeRankExample;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2V0UmFuZ2VSYW5rLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2V0UmFuZ2VSYW5rLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXNEO0FBQ3RELHlFQUE0RjtBQUU1RixNQUFxQixtQkFBb0IsU0FBUSxxQ0FBcUI7SUFPbEUsS0FBSztRQUNELDBDQUFjLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsSUFBSSxDQUFDLFNBQVMsRUFBRSxJQUFJLENBQUMsT0FBTyxFQUFFLElBQUksQ0FBQyxTQUFTLEVBQUUsS0FBSyxFQUMvRixJQUFJLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztJQUNyQyxDQUFDO0lBRUQsUUFBUSxDQUFDLE1BQTRCO1FBQ2pDLE9BQU8sQ0FBQyxHQUFHLENBQUMscUJBQXFCLE1BQU0sQ0FBQyxTQUFTLEVBQUUsQ0FBQyxDQUFDO1FBQ3JELElBQUksTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUU7WUFDeEIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxXQUFXLE1BQU0sQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLE1BQU0sV0FBVyxNQUFNLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxJQUFJO2lDQUNyRSxNQUFNLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxLQUFLLFdBQVcsTUFBTSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsSUFBSSxFQUFFLENBQUMsQ0FBQztTQUM5RjtRQUVELElBQUksTUFBTSxDQUFDLFFBQVEsQ0FBQyxRQUFRLEVBQUU7WUFDMUIsS0FBSyxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxHQUFHLE1BQU0sQ0FBQyxRQUFRLENBQUMsUUFBUSxDQUFDLE1BQU0sRUFBRSxFQUFFLENBQUMsRUFBRTtnQkFDdEQsTUFBTSxJQUFJLEdBQUcsTUFBTSxDQUFDLFFBQVEsQ0FBQyxRQUFRLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDO2dCQUNsRCxPQUFPLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQyxhQUFhLElBQUksQ0FBQyxNQUFNLFdBQVcsSUFBSSxDQUFDLElBQUksWUFBWSxJQUFJLENBQUMsS0FBSyxXQUFXLE1BQU0sQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLElBQUksRUFBRSxDQUFDLENBQUM7YUFDbEk7U0FDSjtJQUNMLENBQUM7SUFFRCxPQUFPLENBQUMsS0FBYTtRQUNqQixPQUFPLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3pCLENBQUM7Q0FDSjtBQTlCRCxzQ0E4QkMifQ==","assetPath":"Assets/ZepetoScripts/Test/GetRangeRank.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"leaderboardId","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"startRank","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"endRank","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"ZEPETO.Script.Leaderboard","name":"resetRule","type":"ZEPETO.Script.Leaderboard.ResetRule","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GetRangeRankExample","description":""},"isCompiled":true}'
+  typescriptHash: b6efbf5013afc76ef7f25fe84a52bd77
+  onlyWriteTrigger: 0
